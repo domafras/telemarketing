@@ -54,8 +54,6 @@ A abordagem foi a RandomOverSampler, que gera novas amostrar para a classe minor
 - Antes do ROS: [9045, 2253]
 - Depois do ROS: [9045, 9045]
 
-
-
 ## Grid Search
 Foram avaliados alguns modelos
 - Decision Tree
@@ -64,6 +62,16 @@ Foram avaliados alguns modelos
 - KNeighborsClassifier
 
 O parâmetro de scoring foi o 'recall' levando em consideração o contexto do problema. O melhor resultado foi da RandomForestClassifier, mas o tempo de execução desse modelo também foi o mais alto.
+
+O algoritmo RandomForestClassifier é uma boa escolha para problemas de classificação binária, por várias razões:
+- poderoso ao lidar com grandes conjuntos de dados e muitas variáveis
+- cria várias árvores independentes e as combina, evitando overfitting (ajuste excessivo)
+- lida bem com dados faltantes e variáveis categóricas
+- fornece FeatureImportance
+
+Entretanto, o modelo utilizado para treinamento em outras etapas foi o HistGradientBoostingClassifier, pois:
+- é eficiente em termos de tempo e memória (mais rápido em transformação do que RFC)
+- assim como RFC é preciso em conjuntos de dados complexos e desbalanceados
 
 
 ## Métricas
