@@ -48,6 +48,10 @@ Utilizando a biblioteca Feature-Engine:
 	- correlação entre variáveis pode ser redundante
 - SelectFromModel
 	- FeatureImportance através de árvore (RandomForestClassifier)
+- RecursiveFeatureElimination*
+ 	- elimina variáveis de maneira recursiva
+
+* RFE não está sendo utilizando pois aumenta de forma significativa o tempo de execução.
 
 ## Resampling
 A abordagem foi a RandomOverSampler, que gera novas amostrar para a classe minoritária (1).
